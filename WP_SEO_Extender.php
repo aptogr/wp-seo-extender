@@ -212,16 +212,7 @@ class WP_SEO_Extender {
 		$custom_title   = false;
 		$object         = get_queried_object();
 
-		if( is_singular( Files_Marketplace_Application::POST_TYPE_NAME ) ){
-
-			$custom_title   = 'Successful Application ' . $object->post_title . ' | ' . get_bloginfo('name');
-
-		}
-		else if ( is_tax( Files_Marketplace_Law_Firms::TAXONOMY_SLUG ) ) {
-
-			$custom_title = $object->name . ' - Past Applications and Tips | ' . get_bloginfo('name');
-
-		}
+		//Your code and conditions for the custom seo title
 
 		return $custom_title;
 
@@ -241,16 +232,7 @@ class WP_SEO_Extender {
 		$custom_desc    = false;
 		$object         = get_queried_object();
 
-		if( is_singular( Files_Marketplace_Application::POST_TYPE_NAME ) ){
-
-			$custom_desc = 'This is a custom description for application: '. $object->post_title;
-
-		}
-		else if ( is_tax( Files_Marketplace_Law_Firms::TAXONOMY_SLUG ) ) {
-
-			$custom_desc  = 'This is a custom description for law firm: '. $object->name;
-
-		}
+		//Your code and conditions for the custom seo description
 
 		return $custom_desc;
 
